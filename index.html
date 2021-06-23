@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
     <title>postLabel</title>
 </head>
 <body>
@@ -15,6 +16,7 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
+                <div class="formContainer">
                     <div class="form-group">
                         <label for="exampleInputPassword1">ชื่อผู้ส่ง</label>
                         <input type="name" class="form-control" id="postLabel_senderName" placeholder="ชื่อผู้ส่ง">
@@ -31,7 +33,8 @@
                         <label for="exampleFormControlTextarea1">ที่อยู่ผู้รับ</label>
                         <textarea class="form-control" id="postLabel_recieverAddress" rows="3" placeholder="ที่อยู่ผู้รับ"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="postLabel_submit">Submit</button>              
+                    <button type="submit" class="btn btn-primary" id="postLabel_submit">Submit</button>   
+                </div>           
             </div>
             <div class="col-md-4"></div>
         </div>

@@ -1,0 +1,9 @@
+.formContainer {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    border-style: solid;
+    border-color: #d0cfcf;
+    border-width: 1px;    
+}
