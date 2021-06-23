@@ -11,8 +11,46 @@ $(document).ready(function(){
 
         var doc = new jsPDF();
 
-        doc.text('Hello world!', 10, 10);
-        doc.output('dataurlnewwindow');        
+        doc.setFont('Sarabun-ExtraBold', 'normal');
+        doc.setFontSize(12);
+        doc.text(10, 20, 'ชื่อผู้ส่ง', {
+            maxWidth: 70
+        });
+        doc.setFontSize(12);
+        doc.text(10, 30, 'ที่อยู่ผู้ส่ง', {
+            maxWidth: 70
+        });
+        doc.setFont('Sarabun-Regular', 'normal');
+        doc.setFontSize(12);
+        doc.text(29, 20, senderName, {
+            maxWidth: 70
+        });
+        doc.setFontSize(12);
+        doc.text(29, 30, senderAddress, {
+            maxWidth: 70
+        });
+
+        doc.setFont('Sarabun-ExtraBold', 'normal');
+        doc.setFontSize(12);
+        doc.text(10, 50, 'ชื่อผู้รับ', {
+            maxWidth: 70
+        });
+        doc.setFontSize(12);
+        doc.text(10, 60, 'ที่อยู่ผู้รับ', {
+            maxWidth: 70
+        });
+        doc.setFont('Sarabun-Regular', 'normal');
+        doc.setFontSize(12);
+        doc.text(29, 50, recieverName, {
+            maxWidth: 70
+        });
+        doc.setFontSize(12);
+        doc.text(29, 60, recieverAddress, {
+            maxWidth: 70
+        });
+
+
+        doc.output('dataurlnewwindow','myPdf.pdf');        
 
     });
 
