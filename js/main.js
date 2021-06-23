@@ -11,41 +11,44 @@ $(document).ready(function(){
 
         var doc = new jsPDF();
 
+        var startPosY = 20;
+        var startPosX = 10;
+
         doc.setFont('Sarabun-ExtraBold', 'normal');
         doc.setFontSize(12);
-        doc.text(10, 20, 'ชื่อผู้ส่ง', {
+        doc.text(startPosX, startPosY, 'ชื่อผู้ส่ง', {
             maxWidth: 70
         });
         doc.setFontSize(12);
-        doc.text(10, 30, 'ที่อยู่ผู้ส่ง', {
+        doc.text(startPosX, startPosY+10, 'ที่อยู่ผู้ส่ง', {
             maxWidth: 70
         });
         doc.setFont('Sarabun-Regular', 'normal');
         doc.setFontSize(12);
-        doc.text(29, 20, senderName, {
+        doc.text(startPosX + 19, startPosY, senderName, {
             maxWidth: 70
         });
         doc.setFontSize(12);
-        doc.text(29, 30, senderAddress, {
+        doc.text(startPosX + 19, startPosY+10, senderAddress, {
             maxWidth: 70
         });
 
         doc.setFont('Sarabun-ExtraBold', 'normal');
         doc.setFontSize(12);
-        doc.text(10, 50, 'ชื่อผู้รับ', {
+        doc.text(startPosX, startPosY + 30, 'ชื่อผู้รับ', {
             maxWidth: 70
         });
         doc.setFontSize(12);
-        doc.text(10, 60, 'ที่อยู่ผู้รับ', {
+        doc.text(startPosX, startPosY + 40, 'ที่อยู่ผู้รับ', {
             maxWidth: 70
         });
         doc.setFont('Sarabun-Regular', 'normal');
         doc.setFontSize(12);
-        doc.text(29, 50, recieverName, {
+        doc.text(startPosX + 19, startPosY + 30, recieverName, {
             maxWidth: 70
         });
         doc.setFontSize(12);
-        doc.text(29, 60, recieverAddress, {
+        doc.text(startPosX + 19, startPosY + 40, recieverAddress, {
             maxWidth: 70
         });
 
