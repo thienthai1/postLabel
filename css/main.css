@@ -1,4 +1,5 @@
 .formContainer {
+    position: relative;
     padding-top: 16px;
     padding-left: 16px;
     padding-right: 16px;
@@ -6,4 +7,11 @@
     border-style: solid;
     border-color: #d0cfcf;
     border-width: 1px;    
+}
+
+.list-icons {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
 }

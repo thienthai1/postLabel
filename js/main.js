@@ -57,4 +57,8 @@ $(document).ready(function(){
 
     });
 
+    $('#postLabel_save').click(function() {
+        console.log("moo");
+    });
+
 });
