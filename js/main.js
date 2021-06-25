@@ -94,21 +94,25 @@ $(document).ready(function(){
         $('#postLabel_recieverAddress').val('')
         $('#postLabel_listLengthNumber').empty();
         $('#postLabel_listLengthNumber').append(getLength);
-        $('#postLabel_notiList').toggle();
-        noti = 1;
+        if($('#postLabel_notiList').css('display') == 'none'){
+            $('#postLabel_notiList').toggle();
+            noti = 1;
+        }
+
     });
 
     $('#postLabel_openNameList').click(function() {
-        $('.listRecipient').css('display','block');
-        $('.listRecipient').focus();
-        if(noti == 1){
+        $('.listRecipient').toggle();
+        if($('#postLabel_notiList').css('display') == 'block'){
             $('#postLabel_notiList').toggle();
+            noti = 0;
         }
-        noti = 0;
     });
 
-    $('.listRecipient').blur(function() {
-        $('.listRecipient').css('display','none');
-    });
+    $(document).on("click", function(event){
+        if(event.target.className != 'listRecipient' && event.target.id != 'postLabel_openNameList'){
+            $('.listRecipient').css('display','none');
+        }
+    })
 
 });
