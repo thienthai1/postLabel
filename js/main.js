@@ -110,9 +110,22 @@ $(document).ready(function(){
     });
 
     $(document).on("click", function(event){
-        if(event.target.className != 'listRecipient' && event.target.id != 'postLabel_openNameList'){
+        if(event.target.className != 'listRecipient' && event.target.id != 'postLabel_openNameList' && event.target.id != 'postLabel_clearList'){
             $('.listRecipient').css('display','none');
         }
     })
+
+    $('#postLabel_clearList').click(function(){
+        var getTable = $('.listRecipient').children()[0];
+        var getBody = $(getTable).children()[0];
+        $(getBody).empty();
+        $(getBody).append('<tr><th>ผู้ส่ง</th><th>ผู้รับ</th></tr>');
+        sendList = []
+        $('.listRecipient').toggle();
+        if($('#postLabel_notiList').css('display') == 'block'){
+            $('#postLabel_notiList').toggle();
+            noti = 0;
+        }
+    });
 
 });
